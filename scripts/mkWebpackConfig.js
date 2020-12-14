@@ -2,6 +2,7 @@ const path = require("path");
 const os = require("os")
 const fs = require("fs")
 const { assemble, pipe, depend } = require("webpack-pipe");
+const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 
 // 入口配置
 const entry = (config) => depend.merge({
@@ -95,6 +96,16 @@ const antdTheme = (config) => {
     return config
 }
 
+const monacoWebpack = (config) => {
+    config.plugins.push(
+        new MonacoWebpackPlugin({
+            // available options are documented at https://github.com/Microsoft/monaco-editor-webpack-plugin#options
+            languages: ['javascript']
+        })
+    )
+    return config
+}
+
 /**
  * 组装webpack config
  * @return {*}
@@ -105,6 +116,7 @@ module.exports = (pipeNodes = []) => {
         intl,
         styledJsx,
         antdTheme,
+        monacoWebpack,
 
         pipe.base,
         pipe.staticResource,
