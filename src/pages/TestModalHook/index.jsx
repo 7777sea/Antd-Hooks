@@ -1,11 +1,11 @@
 import React from 'react';
 import { Button } from 'antd';
 import CModal from './Modal';
-import useModel from '@/components/Hooks/useModal';
+import useModal from '@/components/Hooks/useModal';
 
-const TestModelHook = () => {
+const TestModalHook = () => {
 
-    const [ modal, Modal ] = useModel(CModal)
+    const [ modal, Modal ] = useModal(CModal)
 
     const showModalHandle = () => modal.show()
 
@@ -15,17 +15,17 @@ const TestModelHook = () => {
     </div>
 }
 
-export default TestModelHook;
+export default TestModalHook;
 
 export const code = `
     import React from 'react';
     import { Button } from 'antd';
     import CModal from './Modal';
-    import useModel from '@/components/Hooks/useModal';
+    import useModal from '@/components/Hooks/useModal';
 
-    const TestModelHook = () => {
+    const TestModalHook = () => {
 
-        const [ modal, Modal ] = useModel(CModal)
+        const [ modal, Modal ] = useModal(CModal)
 
         const showModalHandle = () => modal.show()
 
@@ -35,5 +35,5 @@ export const code = `
         </div>
     }
 
-    export default TestModelHook;
+    export default TestModalHook;
 `

@@ -9,7 +9,7 @@ const NLayout = () => {
 
     const [ isCollapsed, setIsCollapsed ] = useState(false); 
     const [ drawerVisible, setDrawerVisible ] = useState(false); 
-    const [ type, setType ] = useState('MODEL'); 
+    const [ type, setType ] = useState('MODAL'); 
 
 
     return <Layout className='l_n_layout'>

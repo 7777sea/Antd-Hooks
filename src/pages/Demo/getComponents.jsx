@@ -1,24 +1,34 @@
-import TestModelHook, { code } from '../TestModelHook';
+import TestModalHook, { code as modalCode } from '../TestModalHook';
 import LTable from '../Table';
+import LDrawer, { code as drawerCode } from '../Drawer';
 
 const EnumType = {
-    model: 'MODEL',
-    table: 'TABLE'
+    modal: 'MODAL',
+    table: 'TABLE',
+    drawer: 'DRAWER'
 }
 
 const _EnumTypeComponents = {
-    [EnumType.model]: {
-        type: EnumType.model,
-        title: 'Model',
-        desc: 'Model',
-        comp: TestModelHook,
-        code: code
+    [EnumType.modal]: {
+        type: EnumType.modal,
+        title: 'Modal',
+        desc: 'Modal',
+        comp: TestModalHook,
+        code: modalCode
     },
     [EnumType.table]: {
         type: EnumType.table,
         title: 'Table',
         desc: 'TABLE',
-        comp: LTable
+        comp: LTable,
+        code: '32231414'
+    },
+    [EnumType.drawer]: {
+        type: EnumType.drawer,
+        title: 'Drawer',
+        desc: 'Drawer',
+        comp: LDrawer,
+        code: drawerCode
     }
 }
 

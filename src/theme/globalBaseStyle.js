@@ -16,6 +16,21 @@ a{
     background-color: rgba(0,201, 195, 0.5);
 }
 
+.react-resizable {
+    position: relative;
+    background-clip: padding-box;
+}
+.react-resizable-handle {
+    position: absolute;
+    left: -5px;
+    bottom: 0;
+    z-index: 1;
+    width: 10px;
+    height: 100%;
+    cursor: col-resize;
+    background: blue
+}
+
 // 定义获取字体样式的方法
 @mixin get-font-style($font-size){
     font-family: ${theme.fontFamily};

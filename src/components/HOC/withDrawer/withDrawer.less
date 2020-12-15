@@ -1,0 +1,22 @@
+.l_drawer{
+    :global(.react-resizable) {
+        position: relative;
+        background-clip: padding-box;
+    }
+    :global(.react-resizable-handle) {
+        position: absolute;
+        left: -5px;
+        bottom: 0;
+        z-index: 1;
+        width: 10px;
+        height: 100%;
+        cursor: col-resize;
+        background: blue
+    }
+    :global(.inner) {
+        border: 1px solid orange;
+        user-select: none;
+        height: 100%;
+        overflow: hidden
+    } 
+}
