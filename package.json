@@ -31,6 +31,7 @@
     "react-intl": "^3.9.2",
     "react-monaco-editor": "^0.40.0",
     "react-resizable": "^2.0.0",
+    "react-rnd": "^10.2.4",
     "react-router-dom": "^5.1.2",
     "rxjs": "^6.5.3",
     "styled-jsx": "^3.2.4"

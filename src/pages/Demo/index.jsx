@@ -53,7 +53,7 @@ const NLayout = () => {
                 >
                     <MonacoEditor
                         width="800"
-                        height="500"
+                        height="600"
                         language="javascript"
                         theme="vs-dark"
                         value={getComponents(type)?.code}
